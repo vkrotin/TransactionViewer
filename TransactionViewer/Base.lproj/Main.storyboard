@@ -65,9 +65,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="3q3-X5-81p">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NP-Gg-CIV">
+                                    <rect key="frame" x="14" y="12" width="353" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="4NP-Gg-CIV" firstAttribute="leading" secondItem="3q3-X5-81p" secondAttribute="leading" constant="14" id="CV7-eK-3c8"/>
+                                <constraint firstAttribute="bottom" secondItem="4NP-Gg-CIV" secondAttribute="bottom" constant="11" id="Tlc-Ee-fMc"/>
+                                <constraint firstItem="4NP-Gg-CIV" firstAttribute="top" secondItem="3q3-X5-81p" secondAttribute="top" constant="12" id="dCh-iM-brl"/>
+                                <constraint firstAttribute="trailing" secondItem="4NP-Gg-CIV" secondAttribute="trailing" constant="8" id="tsz-5c-hi4"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="IJR-Zo-a3b" detailTextLabel="j78-GS-wHB" style="IBUITableViewCellStyleValue1" id="Jec-oE-bAX">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jec-oE-bAX" id="PvZ-37-MGG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -96,10 +115,13 @@
                             <outlet property="delegate" destination="iUh-fA-BSb" id="jbA-T5-8eL"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="totalLabel" destination="4NP-Gg-CIV" id="pDd-S2-jnG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aT-wL-33k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="134"/>
+            <point key="canvasLocation" x="976.79999999999995" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fVG-Yt-7os">
