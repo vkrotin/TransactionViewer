@@ -17,7 +17,7 @@ class TransactionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let total = countTotal()
-        totalLabel.text = String(format: "%.2f", total)  + " GBP"
+        totalLabel.text = "Total: " + String(format: "%.2f", total)  + " GBP"
         
         
         
