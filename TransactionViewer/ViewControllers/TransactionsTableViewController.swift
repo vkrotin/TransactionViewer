@@ -11,33 +11,16 @@ import UIKit
 class TransactionsTableViewController: UITableViewController {
     var transactions:[Transaction] = []
     
-    @IBOutlet weak var totalLabel: UILabel!
-    private let requestService = RequestService()
+}
+
+ // MARK: - Table view data source
+
+extension TransactionsTableViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let total = countTotal()
-        totalLabel.text = "Total: " + String(format: "%.2f", total)  + " GBP"
-        
-        
-        
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Total: " + String(format: "%.2f", transactions.map({$0.amountForGBP}).reduce(0, +)) + " GBP"
     }
     
-    // count Total
-    
-    func countTotal() -> Double {
-        var total = 0.0
-        for value in transactions{
-            total = total + value.amountForGBP
-        }
-        return total
-    }
-
-    // MARK: - Table view data source
-    
-    
-    
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
     }
@@ -46,7 +29,7 @@ class TransactionsTableViewController: UITableViewController {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         cell.textLabel?.text = "\(transactions[indexPath.row].amount)  \(transactions[indexPath.row].currency)"
-        cell.detailTextLabel?.text = "\(transactions[indexPath.row].amountForGBP) GBP"
+        cell.detailTextLabel?.text = "\(transactions[indexPath.row].amountForGBP.roundToDecimal(2)) GBP"
         
         return cell
     }

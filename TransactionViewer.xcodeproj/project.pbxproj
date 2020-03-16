@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		755392A2241F909E00A5FB62 /* Double+help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755392A1241F909E00A5FB62 /* Double+help.swift */; };
 		75B1AD1E213E77440001097F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1AD1D213E77440001097F /* AppDelegate.swift */; };
 		75B1AD23213E77440001097F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B1AD21213E77440001097F /* Main.storyboard */; };
 		75B1AD25213E77450001097F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B1AD24213E77450001097F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		755392A1241F909E00A5FB62 /* Double+help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+help.swift"; sourceTree = "<group>"; };
 		75B1AD1A213E77440001097F /* TransactionViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B1AD1D213E77440001097F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B1AD22213E77440001097F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		755392A0241F907D00A5FB62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				755392A1241F909E00A5FB62 /* Double+help.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		75B1AD11213E77440001097F = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		75B1AD1C213E77440001097F /* TransactionViewer */ = {
 			isa = PBXGroup;
 			children = (
+				755392A0241F907D00A5FB62 /* Extensions */,
 				75B1AD3E213E82780001097F /* ViewControllers */,
 				75B1AD39213E7A6A0001097F /* Services */,
 				75B1AD34213E77C60001097F /* Model */,
@@ -191,6 +202,7 @@
 				75B1AD40213E82AB0001097F /* ProductsTableViewController.swift in Sources */,
 				75B1AD36213E78050001097F /* Rate.swift in Sources */,
 				75B1AD3D213E7B130001097F /* RequestService.swift in Sources */,
+				755392A2241F909E00A5FB62 /* Double+help.swift in Sources */,
 				75B1AD38213E78210001097F /* Transaction.swift in Sources */,
 				75B1AD1E213E77440001097F /* AppDelegate.swift in Sources */,
 			);
@@ -336,8 +348,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z44RY25MUV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U7W6SCZABU;
 				INFOPLIST_FILE = TransactionViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,6 +357,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vkrotin.TransactionViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Develop: wildcard";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,8 +367,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z44RY25MUV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U7W6SCZABU;
 				INFOPLIST_FILE = TransactionViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,6 +376,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vkrotin.TransactionViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Develop: wildcard";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
