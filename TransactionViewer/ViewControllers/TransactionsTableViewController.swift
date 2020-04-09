@@ -18,7 +18,7 @@ class TransactionsTableViewController: UITableViewController {
 extension TransactionsTableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Total: " + String(format: "%.2f", transactions.map({$0.amountForGBP}).reduce(0, +)) + " GBP"
+        return transactions.totalStringGBP()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,8 +28,8 @@ extension TransactionsTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        cell.textLabel?.text = "\(transactions[indexPath.row].amount)  \(transactions[indexPath.row].currency)"
-        cell.detailTextLabel?.text = "\(transactions[indexPath.row].amountForGBP.roundToDecimal(2)) GBP"
+        cell.textLabel?.text = transactions.amountCurrencyString(indexPath.row)
+        cell.detailTextLabel?.text = transactions.amountStringGBP(indexPath.row)
         
         return cell
     }

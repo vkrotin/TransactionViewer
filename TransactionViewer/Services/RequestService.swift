@@ -49,7 +49,7 @@ class RequestService {
         if let path = Bundle.main.path(forResource: "rates", ofType: "plist"),
             let arrayJson = NSArray(contentsOfFile: path){
             for object in arrayJson{
-                
+               
                 guard let needObj = object as? [String : AnyObject] else{
                     continue
                 }
